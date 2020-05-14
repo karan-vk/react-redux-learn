@@ -3,7 +3,8 @@ const person = (props) => {
     return(
  <div> 
 
- <p>my name is {props.name} I am  {props.age} old </p>
+ <p>my name is {props.name} I am  {props.age} old {props.children}</p>
+ <p></p>
       
  </div>
        );

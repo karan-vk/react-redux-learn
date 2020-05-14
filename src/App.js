@@ -1,20 +1,35 @@
-import React from 'react';
-import './App.css';
-import Person from './Person/Person'
+import React, { Component } from "react";
+import "./App.css";
+import Person from "./Person/Person";
 
-function App() {
-  return (
-    <div className="App">
-      <h1 > Hi this is karan</h1>
-      <Person name="James" age="19"> hello</Person>
-      
-      
-      
-    </div>
-  );
-// return React.createElement('div',{className:'App'},React.createElement('h1',null,'hi I\' karan!!'))
+class App extends Component {
+  state = {
+    persons: [
+      { name: "karan", age: 19 },
+      { name: "Amu", age: 48 },
+    ],
+  };
+  switchNameHandler = () => {
+    this.setState({
+      persons: [
+        { name: "KaranV", age: 20 },
+        { name: "Amu", age: 48 },
+      ],
+    });
+  };
 
+  render() {
+    return (
+      <div className="App">
+        <h1>Hi this is Karan</h1>
+        <button onClick={this.switchNameHandler}>Switch Name</button>
+        <Person
+          name={this.state.persons[0].name}
+          age={this.state.persons[0].age}
+        ></Person>
+      </div>
+    );
+  }
 }
-
 
 export default App;
