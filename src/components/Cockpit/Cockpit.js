@@ -1,37 +1,35 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useContext } from "react";
 
-import classes from './Cockpit.module.css';
+import classes from "./Cockpit.module.css";
+import AuthContext from "../../context/auth-context";
 
-const Cockpit = props => {
-
-  const togglebuttonRef =useRef(null);
-  
-
-
+const Cockpit = (props) => {
+  const togglebuttonRef = useRef(null);
+  const authContext = useContext(AuthContext);
 
   useEffect(() => {
-    console.log('[Cockpit.js] useEffect');
+    console.log("[Cockpit.js] useEffect");
     // Http request...
     setTimeout(() => {
       // alert('Saved data to cloud!');
-      togglebuttonRef.current.click()
+      togglebuttonRef.current.click();
     }, 2000);
     return () => {
-      console.log('[Cockpit.js] cleanup work in useEffect');
+      console.log("[Cockpit.js] cleanup work in useEffect");
     };
-  }, [ ]);
+  }, []);
 
   useEffect(() => {
-    console.log('[Cockpit.js] 2nd useEffect');
+    console.log("[Cockpit.js] 2nd useEffect");
     return () => {
-      console.log('[Cockpit.js] cleanup work in 2nd useEffect');
+      console.log("[Cockpit.js] cleanup work in 2nd useEffect");
     };
   });
 
   // useEffect();
 
   const assignedClasses = [];
-  let btnClass = '';
+  let btnClass = "";
   if (props.showPersons) {
     btnClass = classes.Red;
   }
@@ -46,11 +44,15 @@ const Cockpit = props => {
   return (
     <div className={classes.Cockpit}>
       <h1>{props.title}</h1>
-      <p className={assignedClasses.join(' ')}>This is really working!</p>
-      <button ref={togglebuttonRef} className={btnClass} onClick={props.clicked}>
+      <p className={assignedClasses.join(" ")}>This is really working!</p>
+      <button
+        ref={togglebuttonRef}
+        className={btnClass}
+        onClick={props.clicked}
+      >
         Toggle Persons
       </button>
-      <button onClick={props.login}>Login</button>
+      <button onClick={authContext.login}>Login</button>
     </div>
   );
 };
