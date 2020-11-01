@@ -9367,10 +9367,10 @@ querystringify@^2.1.1:
   resolved "https://registry.yarnpkg.com/querystringify/-/querystringify-2.1.1.tgz#60e5a5fd64a7f8bfa4d2ab2ed6fdf4c85bad154e"
   integrity sha512-w7fLxIRCRT7U8Qu53jQnJyPkYZIaR4n5151KMfcJlO/A9397Wxb1amJvROTK6TOnp7PfoAmg/qXiNHI+08jRfA==
 
-radium@^0.26.0:
-  version "0.26.0"
-  resolved "https://registry.yarnpkg.com/radium/-/radium-0.26.0.tgz#3f5107e35da257abbcfafb486f11ca2ce99f1b0b"
-  integrity sha512-4+oqTuMmrOpuwk7ikzft5Aau24UTD/SsurgRmLlDsZZeegCCScmviCiBiLw6XyFk8BiACYfjB2Yq0gmgHQfV0Q==
+radium@^0.26.1:
+  version "0.26.1"
+  resolved "https://registry.yarnpkg.com/radium/-/radium-0.26.1.tgz#77f605625a90c7a7eac6cb9ac755497ee87a55ce"
+  integrity sha512-v2DvtBmy5w01hKrCAZmIkEHOMHmj6AeKI9115W2GOCExosP6+7PXV9LHPjZaiOkw3LP4FGvqhNaAWJhcQzoU4g==
   dependencies:
     exenv "^1.2.1"
     hoist-non-react-statics "3.3.0"
